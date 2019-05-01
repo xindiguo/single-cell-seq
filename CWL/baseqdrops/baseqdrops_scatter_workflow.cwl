@@ -99,7 +99,7 @@ steps:
   run: https://raw.githubusercontent.com/sgosline/synapse-workflow-cwl-tools/master/join-fileview-by-specimen-tool.cwl
   in:
     filelist: baseqdrop_workflow/umi_file
-    values: baseqdrop_workflow/sample_name
+    values: get-samples-from-fv/names
     manifest_file: get-clinical/query_result
     parentid: parentid
     key: key
@@ -119,7 +119,7 @@ steps:
   run: https://raw.githubusercontent.com/sgosline/synapse-workflow-cwl-tools/master/join-fileview-by-specimen-tool.cwl
   in:
     filelist: baseqdrop_workflow/reads_file
-    values: baseqdrop_workflow/sample_name
+    values: get-samples-from-fv/names
     manifest_file: get-clinical/query_result
     parentid: parentid
     key: key
