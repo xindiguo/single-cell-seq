@@ -15,6 +15,8 @@ inputs:
     default: "syn18460306"
   reference_genome: string?
   protocol: string?
+  parentid: string
+  key: string
 
 outputs:
 
@@ -97,11 +99,10 @@ steps:
   run: https://raw.githubusercontent.com/sgosline/synapse-workflow-cwl-tools/master/join-fileview-by-specimen-tool.cwl
   in:
     filelist: baseqdrop_workflow/umi_file
-    scripts: scripts
     values: baseqdrop_workflow/sample_name
     manifest_file: get-clinical/query_result
     parentid: parentid
-    key: individualID
+    key: key
   out:
   - newmanifest
 
@@ -118,11 +119,10 @@ steps:
   run: https://raw.githubusercontent.com/sgosline/synapse-workflow-cwl-tools/master/join-fileview-by-specimen-tool.cwl
   in:
     filelist: baseqdrop_workflow/reads_file
-    scripts: scripts
     values: baseqdrop_workflow/sample_name
     manifest_file: get-clinical/query_result
     parentid: parentid
-    key: individualID
+    key: key
   out:
   - newmanifest
 
