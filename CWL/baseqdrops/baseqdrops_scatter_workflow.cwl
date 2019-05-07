@@ -15,6 +15,7 @@ inputs:
     default: "syn18460306"
   reference_genome: string?
   protocol: string?
+  parallel: int?
   parentid: string
   key: string
 

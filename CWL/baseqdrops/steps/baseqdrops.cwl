@@ -59,6 +59,12 @@ inputs:
   default: "10X"
   inputBinding:
     prefix: --protocol  
+
+- id: parallel
+  type: int
+  default: 4
+  inputBinding:
+    prefix: --parallel 
   
 outputs:
 

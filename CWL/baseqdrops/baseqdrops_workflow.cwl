@@ -17,6 +17,7 @@ inputs:
   synapse_config: File
   reference_genome: string?
   protocol: string?
+  parallel: int?
 
 outputs:
 

@@ -5,6 +5,7 @@
     "class": "File",
     "path": "/home/xguo/.synapseConfig"
   },
+  "parallel": 8,
   "parentid": "syn5578056",
   "key": "individualID"
 }
