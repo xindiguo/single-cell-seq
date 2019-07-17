@@ -38,4 +38,10 @@ outputs:
   predictions:
     type: File
     outputBinding:
-      glob: $(inputs.output_path)
+      glob: "*"
+      outputEval: |
+        ${
+          var io=inputs.output
+          self[0].basename = io
+          return self[0]
+        }
