@@ -41,7 +41,7 @@ outputs:
       glob: "*"
       outputEval: |
         ${
-          var io=inputs.output
+          var io=inputs.output_path
           self[0].basename = io
           return self[0]
         }
