@@ -49,7 +49,6 @@ steps:
       [predictions]
   store-output-file:
     run: https://raw.githubusercontent.com/Sage-Bionetworks/synapse-client-cwl-tools/master/synapse-store-tool.cwl
-    scatter: file_to_store
     in: 
       synapse_config: synapse_config
       file_to_store: run-garnett/predictions
