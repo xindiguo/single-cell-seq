@@ -44,7 +44,7 @@ steps:
       synapse_config: synapse_config
       input_path: get-input-file/input_file
       output_path: output_name
-      marker_path: get-marker_file/marker_file
+      marker_path: get-marker-file/marker_file
     out:
       [predictions]
   store-output-file:
