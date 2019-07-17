@@ -30,21 +30,21 @@ steps:
       synapseid: input_id
       synapse_config: synapse_config
     out: 
-      [input_file]
+      [filepath]
   get-marker-file:
     run: https://raw.githubusercontent.com/Sage-Bionetworks/synapse-client-cwl-tools/master/synapse-get-tool.cwl
     in:
       synapseid: marker_id
       synapse_config: synapse_config
     out:
-      [marker_file]
+      [filepath]
   run-garnett:
     run: run-garnett.cwl
     in:
       synapse_config: synapse_config
-      input_path: get-input-file/input_file
+      input_path: get-input-file/filepath
       output_path: output_name
-      marker_path: get-marker-file/marker_file
+      marker_path: get-marker-file/filepath
     out:
       [predictions]
   store-output-file:
